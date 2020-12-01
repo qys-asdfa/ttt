@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dade {
+            width: 100%;
+
+
+        }
+
+        .img img {
+            width: 100%;
+        }
+
+        #box {
+            width: 90%;
+
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dade">
+        <div class="img">
+            <img src="../image/1.png" alt="">
+        </div>
+        <div id="box">
+          
+
+        </div>
+    </div>
+</body>
+<script>
+    $(function () {
+
+        // function getJSON() {
+        //     //使用promise获取数据的函数
+        //     let aSm = new Promise((resolve, resject) => {
+        //         //获取数据
+        //         $.getJSON('../json/houniao.json', '', function (res) {
+        //             resolve(res);
+
+        //         });
+
+                
+        //     });
+
+           
+        //    let aSm1 = new Promise((resolve,resject)=>{
+        //        $.get('http://www.51houniao.com/product/product/guessYouLike','',function(res){
+        //            resolve(res);
+        //        })
+        //    });
+
+        //     return aSm,aSm1;
+        // }
+
+        // //调用
+        // //一定有 .then()
+        // //.then()的参数是两个函数，第一函数接收成功的值，第二个函数接收失败的值
+        // getJSON().then(function (res) { //成功的回调
+        //     // console.log(res);
+        //     let data = res.matchedProducts;
+        //     console.log(data);
+        //     let str = '';
+
+        //     for (let i = 0; i < res.length; i++) {
+
+        //         str = $(`<div class="">
+        //                    <img src="${res[i].proPicUrl}"> 
+        //                 </div>`);
+        //         $('#box').append(str);
+        //     }
+        // }, function (err) { //失败的回调
+
+        // })
+
+        // getJSON.all([aSm,aSm1]).then((result) => {
+        //     console.log(result);
+        // }).catch((err) => {
+            
+        // });
+
+
+
+        function getJSON(){
+            let asd = new Promise((resolve,resject) => {
+                //获取数据
+                
+            });
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    });
+</script>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>promise链式写法</title>
+    <script src="../js.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="box1">
+
+    </div>
+</body>
+<script>
+    $(function () {
+
+        function getli(get) {
+            let ap = new Promise((resolve, resject) => {
+                $.ajax({
+                    type: "get",
+                    url: '../json.1/0'+get+'.json',
+                    contentType: "application/json;charset=UTF-8",
+                    success:function(res){
+                        resolve(res.matchedProducts);
+                    },
+                    error:function(err){
+                        resject(err);
+                    }
+                });
+            });
+            return ap;
+        }
+
+
+        function wer(res){
+           for(let i=0;i<res.length;i++){
+               console.log(i)
+              let $a = $(`<img src="${res[i].pro_pic_url}">`);
+              $('#box1').append($a);
+           }
+        }
+
+        getli(1).then(function(res){
+            wer(res);
+            return getli(2);
+        }).then(function(res){
+            wer(res);
+            return getli(3);
+        }).then(function(res){
+           wer(res);
+        }).catch(function(e){
+           console.log('获取错误'+e);   
+        });
+
+
+        
+
+    })
+</script>
+
+</html>

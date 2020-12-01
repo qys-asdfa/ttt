@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    onload = function(){
+        //es6 set数据类型，特点:里面的值不能重复，set可以用于做去重处理
+        let myset =new Set();
+        [,2,2,2,55,6,9,8,7,7,7,7,88,78].forEach(x => myset.add(x));
+        console.log(myset);
+        
+
+        function aff(){
+          
+        } 
+        
+        
+        //es6的箭头函数写法，节省了很多步骤 "=>"
+        //es6调用方法
+        // a1 = (a,b) =>{
+        //    a++;
+        //    b++;
+        //    return a*b;
+        // }
+        // let ag= a1(10,5);
+
+        // console.log(ag);
+
+        // al = () => {
+
+        // }
+
+        let cat = {
+            age:9,
+            hanshu:()=>{
+                console.log(this)//window箭头函数可以保留this的指针指向
+                this.age--;
+                console.log(this.age);//NanN
+            }
+        }
+        cat.hanshu();
+        cat.hanshu();
+
+
+
+
+    }
+</script>
+</html>

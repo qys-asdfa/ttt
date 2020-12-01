@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      #box{
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+      }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+
+<script>
+    onload = function(){
+        let box =document.getElementById('box');
+        //es6 
+        // let num1 = (i) => i+1;
+        // console.log(num1(1));
+
+
+        //两句话以上的写法，不能省略，大括号和return
+
+        function qys(a,b){
+
+        }
+
+
+        qys = (a,b) => {
+            a++;
+            b++;
+            return a+b;
+        }
+        let c=  qys(10,9);
+
+        console.log(c);
+
+        // box.onclick = function(){
+        //     setInterval(function(){
+        //         console.log(this);
+        //         this.style.background = "red";
+        //     },1000);
+        // }
+
+
+       box.onclick = function(){
+           setInterval(() =>{
+              console.log(this);
+              this.style.background = "red";
+           },1000);
+       }
+
+    }
+</script>
+</html>

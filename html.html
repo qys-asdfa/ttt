@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    onload = function(){
+
+        // console.log(...[1,2,3]); //解析后，打印出参数序列  1,2,3 
+        // console.log([1,2,3]);  
+        // console.log(1,...[2,3,4,5,6]);  //1,2,3,4,5,6
+
+        // let [a,...b] = [1,2,3,4,5,6];
+        // console.log(a);
+        // console.log(b);
+
+        
+        let [firet,...rest] = ['foo'];
+
+        // // console.log(firet);
+        // // console.log(rest);
+
+        console.log('foo');  //字符串
+        console.log([..."foo"]); ///字符串转数组
+
+
+        // let arr1 = [1,2,3];
+        // let arr2 = [4,5,6];
+        // arr1.push(...arr2);
+        // console.log(...arr1);
+
+        // let mAx = Math.max(...[10,100,20,150]); //解析后，最大值是150
+        // console.log(mAx);
+
+
+        // let [a,b,...c] = ['覃袁淞，真帅！','asdf']
+        // console.log(a);
+        // console.log(b);
+
+        // let [a,...b] = ['覃袁淞'];
+        
+        let [a,...b]= [...'覃袁淞'];
+        console.log(a);
+        console.log(b);
+        
+    }
+</script>
+</html>

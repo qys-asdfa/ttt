@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>promise复习</title>
+    <script src="../js.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div id="Jkl">
+
+    </div>
+</body>
+<script>
+    //
+    $(function(){
+       const aa1 = new Promise((rseolve)=>{
+           $.getJSON('../json.1/01.json','',function(res){
+               rseolve(res.matchedProducts);
+           });
+       });
+
+       const aa2 = new Promise((rseolve)=>{
+           $.getJSON('../json.1/02.json','',function(res){
+               rseolve(res.matchedProducts);
+           });
+       });
+
+       const aa3 = new Promise((rseolve)=>{
+           $.getJSON('../json.1/03.json','',function(res){
+               rseolve(res.matchedProducts);
+           });
+       });
+
+
+
+       //渲染页面
+       function writy(res){
+          for(let i=0;i<res.length;i++){
+              console.log(i);
+              let $li = $(`<p>${res[i].pro_title}</p>`);
+             $('#jkl').append($li);
+              
+          }
+       }
+
+
+       Promise.all([aa1,aa2,aa3]).then((data)=>{
+           for(let a=0;a<data.length;a++){
+               writy(data[a]);
+               
+           }
+       })
+    })
+</script>
+</html>
